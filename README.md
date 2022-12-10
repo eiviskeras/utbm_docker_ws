@@ -4,8 +4,8 @@ The source-folders are obtained and installed according to the tutorial [utbm-ro
 The package pyenv is installed with the tutorial [Sunder](https://gist.github.com/jprjr/7667947?permalink_comment_id=3684823#gistcomment-3684823).
 The installation of the ROS-workspace folders is carried out according to [ruffsl](https://answers.ros.org/question/312577/catkin_make-command-not-found-executing-by-a-dockerfile/?answer=312728#post-id-312728).
 
-1. Move the repository-folder (utbm_docker_ws) to your home-directory (/home/$USER/).
-	*1.1 (optional) Modify the wget line in /utbm_docker_ws/Dockerfile to fetch your desired .bag-file from the utbm-dataset. 
+1. Move the repository-folder (utbm_docker_ws) to your home-directory (/home/$USER/). \
+	1.1 (optional) Modify the wget line in /utbm_docker_ws/.devcontainer/Dockerfile to fetch your desired .bag-file from the utbm-dataset. 
 2. Install vs-code with CMake, CMake Tools, Docker, Dev Containers extensions to build the Dockerimage.
 3. Open the folder utbm_docker_ws from within vs-code and wait for a prompt to "reload" the container [Amirdawesh](https://amirdarwesh.com/posts/2019/09/13/ROS-Docker-Vscode/). Click on reload.
 4. Build the container. Be aware, that when the setup is about to finish, the container "hangs" itself, because wget fetches the .bag-file.
