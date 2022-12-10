@@ -1,0 +1,20 @@
+{
+    "name": "utbm-dataset-workspace",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-iot.vscode-ros"
+    ],
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt", "seccomp=unconfined",
+        "-v",
+        "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "bash /utbm_docker_ws/src/docker-setup.sh",
+    "workspaceMount": "src=${localWorkspaceFolder}/../utbm_docker_ws/src/,dst=/utbm_docker_ws/src/,type=bind,consistency=cached",
+    "workspaceFolder": "/utbm_docker_ws"
+}
