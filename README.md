@@ -9,7 +9,7 @@ The installation of the ROS-workspace folders is carried out according to [ruffs
 2. Install vs-code with CMake, CMake Tools, Docker, Dev Containers extensions to build the Dockerimage.
 3. Open the folder utbm_docker_ws from within vs-code and wait for a prompt to "reload" the container [Amirdawesh](https://amirdarwesh.com/posts/2019/09/13/ROS-Docker-Vscode/). Click on reload.
 4. Build the container. Be aware, that when the setup is about to finish, the container "hangs" itself, because wget fetches the .bag-file.
-5. Workspaces are already sourced. Launch the sensors and your .bag-file (modify the location for the .bag, if necessary) to publish the utbm-data. Open additonal Terminals to inspect the data.
+5. Workspaces are already sourced. Launch the sensors and your .bag-file (modify the location for the .bag, if necessary) to publish the utbm-data. Open additonal Terminals to inspect the topics.
 ```
 roslaunch /catkin_ws/src/utbm_robocar_dataset/launch/utbm_dataset_play.launch bag:=/catkin_ws/src/utbm_robocar_dataset/launch/utbm_robocar_dataset_20180713_noimage.bag
 ```
